@@ -69,8 +69,8 @@ const produtos = [
   {nome:"Algodão doce no chocolate preto", img:"Algodao_preto.jpg", preco:10},
   {nome:"Algodão doce no chocolate branco", img:"Algodao_branco.jpg", preco:10},
 
-  {nome:"café no chocolate preto", img:"cafe_preto.jpg", preco:10},
-  {nome:"café no chocolate branco", img:"cafe_branco.jpg", preco:10}
+  {nome:"café no chocolate preto", img:"Cafe_preto.jpg", preco:10},
+  {nome:"café no chocolate branco", img:"Cafe_branco.jpg", preco:10}
 ];
 
 /* RENDER */
