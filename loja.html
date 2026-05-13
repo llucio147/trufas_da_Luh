@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trufas da LUH</title>
+<meta name="description"
+content="Trufas gourmet em Botucatu. Delivery de trufas artesanais, kits personalizados, chocolates premium e presentes doces,trufas botucatu,trufas artesanais,cocolate, Botucatu,SP,Doces Botucatu,Doces em Botucatu,Doces perto de min,Doces em Botucatu">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="topBar">
+
+  <div class="topCarrinho" onclick="toggleCarrinho()">
+
+    <span class="iconeCarrinho">🛒</span>
+
+    <span id="contador">0</span>
+
+    <span id="valorTopo">R$ 0,00</span>
+
+  </div>
+
+</div>
+
+<header class="topo">
+  
+ <a href="index.html">
+  <img src="logo.png" class="logo">
+</a>
+  <div class="topo__center">
+        <p>📍 Atendimento em Botucatu e região</p>
+  </div>
+
+  <a class="btnInstagram" href="https://www.instagram.com/trufas_daluh32" target="_blank">
+    📷 Instagram
+  </a>
+</header>
+<section class="hero">
+  <div class="heroContent">
+    <h1>Pequenos prazeres,<br><span>grandes momentos 💗</span></h1>
+    <p>Trufas artesanais feitas com amor e ingredientes selecionados</p>
+
+    <a href="#produtos" class="btnHero">Ver sabores</a>
+  </div>
+</section>
+
+<section class="kits">
+  <h2>🎁 Kits</h2>
+  <button onclick="abrirKit(3)">Kit 3</button>
+  <button onclick="abrirKit(5)">Kit 5</button>
+  <button onclick="abrirKit(10)">Kit 10</button>
+</section>
+
+<div id="produtos" class="grid"></div>
+
+<div id="carrinho">
+  <div class="carrinhoHeader">
+    <h3>Seu Pedido</h3>
+    <button onclick="toggleCarrinho()">✖</button>
+  </div>
+
+  <div id="listaCarrinho"></div>
+  <div id="total"></div>
+
+  <button onclick="finalizar()">Finalizar Pedido</button>
+  <button onclick="limparCarrinho()">Limpar</button>
+</div>
+
+<a class="whatsapp" href="https://wa.me/5514991271563?text=vim%20pelo%20site" target="_blank">💬</a>
+
+<!-- MODAL KIT -->
+<div id="modalKit" class="modalKit">
+  <div class="modalContent">
+    <h3 id="kitTitulo"></h3>
+    <div id="kitSabores" class="gridKit"></div>
+    <p id="kitContador"></p>
+    <div id="kitResumo"></div>
+
+    <button onclick="confirmarKit()">Adicionar Kit</button>
+    <button onclick="fecharKit()">Cancelar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<!-- SEO IMAGENS -->
+<div style="display:none;">
+
+<img src="Produtos/Ninho_branco.jpg" alt="Trufa gourmet de Ninho no chocolate branco em Botucatu">
+<img src="Produtos/Ninho_preto.jpg" alt="Trufa gourmet de Ninho no chocolate preto em Botucatu">
+
+<img src="Produtos/Abacaxi_branco.jpg" alt="Trufa gourmet de Abacaxi no chocolate branco em Botucatu">
+<img src="Produtos/Abacaxi_preto.jpg" alt="Trufa gourmet de Abacaxi no chocolate preto em Botucatu">
+
+<img src="Produtos/Maracuja_preto.jpg" alt="Trufa gourmet de Maracujá no chocolate preto em Botucatu">
+<img src="Produtos/Maracuja_branco.jpg" alt="Trufa gourmet de Maracujá no chocolate branco em Botucatu">
+
+<img src="Produtos/Limao_branco.jpg" alt="Trufa gourmet de Limão no chocolate branco em Botucatu">
+<img src="Produtos/Limao_preto.jpg" alt="Trufa gourmet de Limão no chocolate preto em Botucatu">
+
+<img src="Produtos/Prestigio_preto.jpg" alt="Trufa gourmet Prestígio no chocolate preto em Botucatu">
+<img src="Produtos/Prestigio_branco.jpg" alt="Trufa gourmet Prestígio no chocolate branco em Botucatu">
+
+<img src="Produtos/Tradicional_branco.jpg" alt="Trufa tradicional no chocolate branco em Botucatu">
+<img src="Produtos/Tradicional_preto.jpg" alt="Trufa tradicional no chocolate preto em Botucatu">
+
+<img src="Produtos/Brigadeiro_branco.jpg" alt="Trufa gourmet de Brigadeiro no chocolate branco em Botucatu">
+<img src="Produtos/Brigadeiro_preto.jpg" alt="Trufa gourmet de Brigadeiro no chocolate preto em Botucatu">
+
+<img src="Produtos/Sensacao_preto.jpg" alt="Trufa Sensação no chocolate preto em Botucatu">
+<img src="Produtos/Sensacao_branco.jpg" alt="Trufa Sensação no chocolate branco em Botucatu">
+
+<img src="Produtos/Manga_preto.jpg" alt="Trufa gourmet de Manga no chocolate preto em Botucatu">
+<img src="Produtos/Manga_branco.jpg" alt="Trufa gourmet de Manga no chocolate branco em Botucatu">
+
+<img src="Produtos/Nutella_branco.jpg" alt="Trufa gourmet de Nutella no chocolate branco em Botucatu">
+<img src="Produtos/Nutella_preto.jpg" alt="Trufa gourmet de Nutella no chocolate preto em Botucatu">
+
+<img src="Produtos/Ninu_preto.jpg" alt="Trufa de Ninho com Nutella no chocolate preto em Botucatu">
+<img src="Produtos/Ninu_branco.jpg" alt="Trufa de Ninho com Nutella no chocolate branco em Botucatu">
+
+<img src="Produtos/Mdl_preto.jpg" alt="Trufa de Maracujá com doce de leite no chocolate preto em Botucatu">
+<img src="Produtos/Mdl_branco.jpg" alt="Trufa de Maracujá com doce de leite no chocolate branco em Botucatu">
+
+<img src="Produtos/Charge_branco.jpg" alt="Trufa gourmet Charge no chocolate branco em Botucatu">
+<img src="Produtos/Charge_preto.jpg" alt="Trufa gourmet Charge no chocolate preto em Botucatu">
+
+<img src="Produtos/Oreo_preto.jpg" alt="Trufa gourmet Oreo no chocolate preto em Botucatu">
+<img src="Produtos/Oreo_branco.jpg" alt="Trufa gourmet Oreo no chocolate branco em Botucatu">
+
+<img src="Produtos/Pistache_branco.jpg" alt="Trufa gourmet de Pistache no chocolate branco em Botucatu">
+<img src="Produtos/Pistache_preto.jpg" alt="Trufa gourmet de Pistache no chocolate preto em Botucatu">
+
+<img src="Produtos/Pacoca_preto.jpg" alt="Trufa gourmet de Paçoca no chocolate preto em Botucatu">
+<img src="Produtos/Pacoca_branco.jpg" alt="Trufa gourmet de Paçoca no chocolate branco em Botucatu">
+
+<img src="Produtos/Florestanegra_preto.jpg" alt="Trufa Floresta Negra no chocolate preto em Botucatu">
+<img src="Produtos/Florestanegra_branco.jpg" alt="Trufa Floresta Negra no chocolate branco em Botucatu">
+
+<img src="Produtos/Cereja_branco.jpg" alt="Trufa gourmet de Cereja no chocolate branco em Botucatu">
+<img src="Produtos/Cereja_preto.jpg" alt="Trufa gourmet de Cereja no chocolate preto em Botucatu">
+
+<img src="Produtos/Manu_preto.jpg" alt="Trufa de Maracujá com Nutella no chocolate preto em Botucatu">
+<img src="Produtos/Manu_branco.jpg" alt="Trufa de Maracujá com Nutella no chocolate branco em Botucatu">
+
+</div>
+</body>
+</html>
