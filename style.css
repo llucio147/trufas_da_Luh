@@ -998,23 +998,20 @@ body{
 
   text-align:center;
 
-  padding:25px 10px;
+  padding:15px 10px;
 
-  margin-top:50px;
+  margin-top:40px;
 
   font-size:14px;
 
   color:#7a5a5a;
 
   opacity:0.8;
-
-  background:#f5e9df;
-
-  border-top:1px solid rgba(0,0,0,0.05);
 }
 
 .assinatura strong{
   color:#5a2d2d;
+}
 }
 @media(max-width:768px){
 
